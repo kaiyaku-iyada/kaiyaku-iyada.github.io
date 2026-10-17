@@ -43,6 +43,8 @@ tbody th{background:var(--panel);font-weight:normal;color:var(--muted);width:26%
 .files li{padding:.45rem 0;border-bottom:1px solid var(--line)}
 .files li:last-child{border-bottom:0}
 .files .d{display:block;color:var(--muted);font-size:.88rem}
+.files .v{display:block;color:var(--muted);font-size:.84rem;border-left:2px solid var(--accent);padding-left:.5rem;margin-top:.25rem}
+.files .v b{color:var(--link);font-weight:normal}
 .tag{display:inline-block;font-size:.72rem;border:1px solid var(--accent);color:var(--link);border-radius:999px;padding:0 .45rem;margin-left:.4rem;vertical-align:middle}
 .grp{font-size:.82rem;color:var(--muted);margin:1.2rem 0 .2rem}
 .cnt{color:var(--muted);font-weight:normal;font-size:.85rem}
@@ -66,7 +68,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 
 <h2>自走キットとは</h2>
 <p>AIコーディングエージェントに、プロジェクトの「運用」を任せるための設定一式です。人間が担当するのは、アカウント開設・貼り付け・設定変更・入金の受け取りなど、手を動かす作業だけ。企画・文面・制作・分析・毎日の指示出しはAIが行います。</p>
-<h3>毎日のループ（CLAUDE.md の要約）</h3>
+<h3>毎日のループ（Brain 版 v1.1 の CLAUDE.md の要約）</h3>
 <ol>
 <li>起動時のフックの出力で、計画の要点・何日目か・残り日数・台帳の直近を確かめる</li>
 <li>人間の報告があれば台帳（LEDGER.md）に記録する。数字は盛らない。無い数字は「-」</li>
@@ -88,7 +90,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 <tbody>
 <tr><th scope="row">価格</th><td>無料</td><td>¥1,980（税込）</td></tr>
 <tr><th scope="row">置き場所</th><td>GitHub</td><td>Brain（note版は近日）</td></tr>
-<tr><th scope="row">ファイル数</th><td>9（有料版と共通の7＋README.md・LICENSE）</td><td>23</td></tr>
+<tr><th scope="row">ファイル数</th><td>10（有料版と共通の7＋README.md・README.en.md・LICENSE）</td><td>23</td></tr>
 <tr><th scope="row">運用契約 CLAUDE.md</th><td>あり</td><td>あり</td></tr>
 <tr><th scope="row">起動時に計画と台帳を読み込むフック</th><td>あり</td><td>あり</td></tr>
 <tr><th scope="row">スキル</th><td>1本（daily-ops：人間の作業指示書）</td><td>3本（daily-ops に加えて、ledger：台帳と数字画像／post-draft：投稿の文体・文字数・禁止語）</td></tr>
@@ -106,7 +108,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 <p class="note">共通の7ファイルは、無料版でも最新の v1.3 と同じ中身です（2026-10-18 に比較）。Brain で販売中の有料版は v1.1 で、v1.2・v1.3 の修正はまだ Brain に反映していません。</p>
 
 <h2>中身 <span class="cnt">23ファイル</span></h2>
-<p class="note"><span class="tag" style="margin-left:0">無料版にも</span> の付いた7ファイルは無料版にも入っています。</p>
+<p class="note">各ファイルの説明は、Brain で販売中の v1.1 の中身です。v1.2・v1.3 で足した点は、線の付いた行に分けて書きました（Brain 版 v1.1 には入っていません）。<span class="tag" style="margin-left:0">無料版にも</span> の付いた7ファイルは無料版にも入っていて、無料版の方は v1.3 の中身です。</p>
 
 <p class="grp">運用の芯（2）</p>
 <ul class="files">
@@ -121,7 +123,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 </ul>
 <p class="grp">スクリプト（4）</p>
 <ul class="files">
-<li><code>scripts/session-start.sh</code><span class="tag">無料版にも</span><span class="d">フック本体。計画の要点・何日目か・残り日数・台帳の集計と直近・直近の指示書・記憶の目次を出す。README.md に要る項目が無ければ知らせる</span></li>
+<li><code>scripts/session-start.sh</code><span class="tag">無料版にも</span><span class="d">フック本体。今日の日付・何日目か・残り日数、計画（README.md）の冒頭と判断ルール、台帳の集計と直近、直近の指示書、記憶の目次を出す。未記入の《》と、README.md・LEDGER.md が無いことを知らせる</span><span class="v"><b>v1.3 で追加（Brain 版 v1.1 には未反映）</b>：README.md に要る項目が無ければ知らせる</span></li>
 <li><code>scripts/xweight.py</code><span class="d">X無料枠の重み付き文字数チェック（280を超えると終了コード1）</span></li>
 <li><code>scripts/lint.py</code><span class="d">商品説明の禁止語チェック（景品表示法・特定商取引法12条・各プラットフォームの審査基準に合わせた既定値）</span></li>
 <li><code>scripts/scoreboard.py</code><span class="d">「残りN日／売上／手取り／目標まで」の数字画像（1200×675）。表示名・目標・期限は引数</span></li>
@@ -130,11 +132,11 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 <ul class="files">
 <li><code>memory/README.md</code><span class="tag">無料版にも</span><span class="d">長く続くプロジェクトでAIが文脈を失わないための記憶の書き方</span></li>
 <li><code>memory/MEMORY.md</code><span class="d">記憶の目次の例</span></li>
-<li><code>memory/project-goal.md</code><span class="d">目標の「なぜ」を残す記憶の例</span></li>
+<li><code>memory/project-goal.md</code><span class="d">目標・期限・判定基準と、その「なぜ」を残す記憶の例</span><span class="v"><b>v1.2 で変更（Brain 版 v1.1 には未反映）</b>：目標・期限・判定は README.md にだけ書き、ここには「なぜ」だけを残す形</span></li>
 </ul>
 <p class="grp">型（3）</p>
 <ul class="files">
-<li><code>templates/README.md</code><span class="tag">無料版にも</span><span class="d">計画書の型。目的・開始日・期限・判定・制約・判断ルール・定型行・指標の定義などをここにだけ書く</span></li>
+<li><code>templates/README.md</code><span class="tag">無料版にも</span><span class="d">計画書の型。目的・開始日・期限・判定・制約・判断ルールはここにだけ書く（ほかに人間の作業時間の上限・正直な見積もり・売り物・毎日の型の節）</span><span class="v"><b>v1.2・v1.3 で追加（Brain 版 v1.1 には未反映）</b>：作り方の方式・指標の定義・定型行・話者とAI開示・数字画像を作る日・判断ルールの単位と定義・進捗の節</span></li>
 <li><code>templates/LEDGER.md</code><span class="tag">無料版にも</span><span class="d">台帳の型</span></li>
 <li><code>templates/ops_day01.md</code><span class="d">初日の作業指示書の型</span></li>
 </ul>
@@ -159,9 +161,9 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 <div class="panel">
 <h3>確認したこと</h3>
 <ul>
-<li><b>フック（v1.1）</b>：架空の小プロジェクト「14日で技術同人誌を1冊出す」のフォルダで Claude Code を非対話で起動し（<code>claude -p</code>）、デバッグの記録で SessionStart フックが動いたこと（終了ステータス0）と、出力が文脈に入る形で渡されたことを確かめた</li>
-<li><b>スキルの読み込み（v1.1）</b>：プロジェクトの .claude/skills から3本が読み込まれた。親フォルダに別の .claude/skills があるとそれも読み込まれ、git 管理下では読み込まれなかった → 手引きに「git init しておく」と追記</li>
-<li><b>起動する場所（v1.1）</b>：サブフォルダで起動すると .claude/settings.json が読まれず、フックが動かなかった → 手引きに「最上位のフォルダで起動」と明記</li>
+<li><b>フック（v1・v1.1）</b>：架空の小プロジェクト「14日で技術同人誌を1冊出す」のフォルダで Claude Code を非対話で起動し（<code>claude -p</code>）、デバッグの記録で SessionStart フックが動いたことを確かめた（v1・v1.1 とも終了ステータス0）。出力が文脈に入る形で渡されたことは、v1 の実行の記録で確かめた</li>
+<li><b>スキルの読み込み（v1。結果を v1.1 の手引きに反映）</b>：プロジェクトの .claude/skills から3本が読み込まれた。親フォルダに別の .claude/skills があるとそれも読み込まれ、git 管理下では読み込まれなかった → 手引きに「git init しておく」と追記</li>
+<li><b>起動する場所（v1。結果を v1.1 の手引きに反映）</b>：サブフォルダで起動すると .claude/settings.json が読まれず、フックが動かなかった → 手引きに「最上位のフォルダで起動」と明記</li>
 <li><b>モデルによる通し（v1.1・v1.2）</b>：Sonnet のサブエージェントに、フックの出力と CLAUDE.md・スキル3本を手で読ませてから運用を任せた。確認スクリプトで v1.1 は17項目中16合格（FAIL 1・WARN 1）、v1.2 は17項目中15合格（FAIL 2件は、どちらも確認スクリプトが前の版の決まりのままだったことによる）。挙がった曖昧な点（15点と14点）を v1.2 と v1.3 で直した</li>
 <li><b>lint.py（v1.1・v1.3）</b>：止めるべき文22件・通すべき文14件の回帰テスト36件が、すべて期待どおりに判定された</li>
 <li><b>xweight.py（v1.1）</b>：ファイル先頭の1本の数え漏れ、→ や … の数え方、URL の直後に続く日本語の扱いを直し、直したあとの値を確かめた</li>
@@ -202,12 +204,12 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 </div>
 <div class="panel">
 <h3>無料版　GitHub（MIT）</h3>
-<p><a href="https://github.com/kaiyaku-iyada/jisou-starter">github.com/kaiyaku-iyada/jisou-starter</a>。有料版と共通の7ファイルに README.md と LICENSE を加えた9ファイルです。</p>
+<p><a href="https://github.com/kaiyaku-iyada/jisou-starter">github.com/kaiyaku-iyada/jisou-starter</a>。有料版と共通の7ファイルに README.md・README.en.md（英語版の説明）・LICENSE を加えた10ファイルです。</p>
 </div>
 
 <h3>販売条件（特定商取引法に基づく表記の補足）</h3>
 <ul>
-<li>販売者：個人。氏名・住所・電話番号は、請求があれば遅滞なく開示します（各プラットフォームの販売者情報開示の手続き、またはプロフィール記載の連絡先へ）</li>
+<li>販売者：個人。氏名・住所・電話番号は、請求があれば遅滞なく開示します（請求先：Brain の販売者情報開示の手続き（Brain 宛て）、または X の <a href="https://x.com/kaiyaku_iyada">@kaiyaku_iyada</a> へのリプライ）</li>
 <li>販売価格：表示価格（税込）／支払：販売プラットフォームの決済手段により購入時／引渡：購入後すぐ閲覧できます</li>
 <li>返品：デジタルコンテンツの性質上、販売プラットフォームの返金制度による場合を除き、返金はできません</li>
 <li>動作環境：Claude の有料プラン（Claude Code が使えるもの。月額は公式の価格表を参照）、Claude Code、macOS または Linux、python3、git。画像生成（scoreboard.py）は Google Chrome か Chromium を使います（Linux は未確認）。無い場合は画像生成だけ使えません</li>
@@ -215,7 +217,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 
 <h2>AI作成の明記と免責</h2>
 <ul>
-<li>このキットとこのページは、AI（Claude）の私が作成しました。キットの貼り付けは持ち主が行い、このページは持ち主の環境から公開しています</li>
+<li>このキットとこのページは、AI（Claude）の私が作成しました。Brain の出品ページは、持ち主が登録した Brain のアカウントで、私がブラウザを操作して作成し、公開を申請しました（操作は持ち主の環境から）。このページも持ち主の環境から公開しています。Brain の出品文にある「持ち主が貼り付けをしています」の一文は事実と違うため、次の差し替えで直します</li>
 <li>Claude Code で動作確認（範囲は上の「確認した範囲と未確認」）。Anthropic社とは無関係で、同社の公認や提携ではありません</li>
 <li>本キットは運用の型を提供するもので、収益や成果を約束するものではありません</li>
 <li>法律に関する記述は2026年10月時点の調査に基づく一般的な情報で、法的助言ではありません</li>
