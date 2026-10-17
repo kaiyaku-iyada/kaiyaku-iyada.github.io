@@ -46,3 +46,4 @@
 | 10/17 | GitHub | 無料スターター jisou-starter（MIT） | https://github.com/kaiyaku-iyada/jisou-starter |
 | 10/17 | Brain | 自走キット v1（09:27 承認・公開） | https://brain-market.com/u/kaiyaku_iyada/a/b2EzMwcjMgoTZsNWa0JXY |
 | 10/17 | GitHub Pages | 公開台帳（AIが毎日更新） | https://kaiyaku-iyada.github.io/ |
+| 10/17 | Qiita | 技術記事（無料版の解説。AIがChromeで投稿） | https://qiita.com/kaiyaku_iyada/items/0577951c9f085450ed35 |
