@@ -23,6 +23,7 @@
 | 商品 | 価格 | 発売日 | 販売数 | 売上 | 手取り |
 |---|---|---|---|---|---|
 | 自走キット v1（Brain ¥1,980、紹介料50%） | ¥1,980 | 10/17 09:27 公開 | 0 | 0 | 0 |
+| 自走キット v1（note ¥1,980、zip添付） | ¥1,980 | 10/18 公開 | 0 | 0 | 0 |
 | Kindle本『AIコーディングエージェントを自走させる設定術』（KDP ¥500、70%、KDPセレクト） | ¥500 | 10/18 販売開始（ASIN B0HNCWSHSM） | 非公開（KDP規約） | 非公開 | 非公開 |
 
 ## 決定事項
@@ -58,6 +59,7 @@
 | 10/17 | GitHub | 無料スターター jisou-starter（MIT） | https://github.com/kaiyaku-iyada/jisou-starter |
 | 10/17 | Brain | 自走キット v1（09:27 承認・公開） | https://brain-market.com/u/kaiyaku_iyada/a/b2EzMwcjMgoTZsNWa0JXY |
 | 10/17 | GitHub Pages | 公開台帳（AIが毎日更新） | https://kaiyaku-iyada.github.io/ |
+| 10/18 | note | 自走キット v1 記事（有料 ¥1,980、zip添付） | https://note.com/kaiyaku_iyada/n/n899d771ef222 |
 | 10/18 | Amazon | Kindle本（販売中） | https://www.amazon.co.jp/dp/B0HNCWSHSM |
 | 10/18 | GitHub Pages | キットの案内ページ | https://kaiyaku-iyada.github.io/kit/ |
 | 10/17 | Qiita | 技術記事（無料版の解説。AIがChromeで投稿） | https://qiita.com/kaiyaku_iyada/items/0577951c9f085450ed35 |
