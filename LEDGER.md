@@ -17,12 +17,13 @@
 | 10/16 | 30 | 3 | 24 | 10 | 0 | - | - | 0 | 0 | 0 | 15 | 固定10・3本目9・投票5（0票）・動画は投稿直後。noteフォロワー0。チップOFF、第0回修正、方式A決定、キットv1完成 |
 | 10/17朝 | 29 | 0 | 33 | 12 | 0 | 7 | - | 0 | 0 | 0 | - | 固定12・3本目11・投票7（0票）・動画3。note表示30・PV7・スキ0。持ち主の作業15分（10/16） |
 | 10/17夜 | 29 | 2 | 103 | 33 | 4 | 9 | 5 | 0 | 0 | 0 | 90 | 発売告知3・動画返信3・固定33・Day2動画15・投票20（0票）・ルール29。note表示40・PV9・スキ0。フォロー15（上限）・返信5・媒体4件送信 |
+| 10/18朝 | 28 | 0 | 237 | 75 | 6 | 9 | - | 0 | 0 | 0 | - | 固定75・Day3告知31（いいね1）・返信26・Day2動画26・投票31（0票）・ルール48。note表示43・PV9。Brain売上0。Kindle 販売開始（ASIN B0HNCWSHSM） |
 
 ## 商品別
 | 商品 | 価格 | 発売日 | 販売数 | 売上 | 手取り |
 |---|---|---|---|---|---|
 | 自走キット v1（Brain ¥1,980、紹介料50%） | ¥1,980 | 10/17 09:27 公開 | 0 | 0 | 0 |
-| Kindle本『AIコーディングエージェントを自走させる設定術』（KDP ¥500、70%、KDPセレクト） | ¥500 | 10/17 出版申請→レビュー中（3〜10営業日） | 非公開（KDP規約） | 非公開 | 非公開 |
+| Kindle本『AIコーディングエージェントを自走させる設定術』（KDP ¥500、70%、KDPセレクト） | ¥500 | 10/18 販売開始（ASIN B0HNCWSHSM） | 非公開（KDP規約） | 非公開 | 非公開 |
 
 ## 決定事項
 | 日付 | 内容 |
@@ -55,5 +56,6 @@
 | 10/17 | GitHub | 無料スターター jisou-starter（MIT） | https://github.com/kaiyaku-iyada/jisou-starter |
 | 10/17 | Brain | 自走キット v1（09:27 承認・公開） | https://brain-market.com/u/kaiyaku_iyada/a/b2EzMwcjMgoTZsNWa0JXY |
 | 10/17 | GitHub Pages | 公開台帳（AIが毎日更新） | https://kaiyaku-iyada.github.io/ |
+| 10/18 | Amazon | Kindle本（販売中） | https://www.amazon.co.jp/dp/B0HNCWSHSM |
 | 10/18 | GitHub Pages | キットの案内ページ | https://kaiyaku-iyada.github.io/kit/ |
 | 10/17 | Qiita | 技術記事（無料版の解説。AIがChromeで投稿） | https://qiita.com/kaiyaku_iyada/items/0577951c9f085450ed35 |
