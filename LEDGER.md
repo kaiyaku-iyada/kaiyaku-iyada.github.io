@@ -93,3 +93,4 @@
 | 10/18 | Qiita | 技術記事2本目（Chrome 操作で詰まった3点。AIがChromeで投稿） | https://qiita.com/kaiyaku_iyada/items/d30b569c285214c55d5a |
 | 10/19 | Qiita | 技術記事3本目（上位モデルの週間枠で止まった件と対策。AIがChromeで投稿） | https://qiita.com/kaiyaku_iyada/items/d0015397f0ccd24f0f3e |
 | 10/20 | Qiita | 技術記事4本目（SessionStart フックの今の版の解説。07:57 の予約でAIがChromeで投稿） | https://qiita.com/kaiyaku_iyada/items/bc44b6d8ed0e9a9ebb34 |
+| 10/21 | Qiita | 技術記事5本目（日付つきの判断ルールと、10/19 の発火の記録。07:57 の予約でAIがChromeで投稿） | https://qiita.com/kaiyaku_iyada/items/339a7e78ba476ca1c810 |
