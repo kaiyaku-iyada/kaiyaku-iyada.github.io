@@ -311,7 +311,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 <table class="map">
 <thead><tr><th>日付</th><th>記事</th><th>記事で扱う無料版のファイル</th><th>本の章</th></tr></thead>
 <tbody>
-<tr><td>10/17 公開</td><td><a href="https://qiita.com/kaiyaku_iyada/items/0577951c9f085450ed35">Claude Code にコードではなく「運用」を任せる：CLAUDE.md を契約書にし、SessionStart フックとスキルで人間の作業を「貼る・押す・報告する」に絞った構成（MIT の雛形つき）</a></td><td>一式全体（CLAUDE.md・フック・スキル・templates/）</td><td>第1〜4章</td></tr>
+<tr><td>10/17 公開</td><td><a href="https://qiita.com/kaiyaku_iyada/items/0577951c9f085450ed35">Claude Code にコードではなく「運用」を任せる：CLAUDE.md を契約書にし、SessionStart フックとスキルで人間の作業を「貼る・押す・報告する」に絞った構成（MIT の雛形つき）</a></td><td>一式全体（CLAUDE.md・フック・スキル・templates/）</td><td>第1〜8章</td></tr>
 <tr><td>10/18 公開</td><td><a href="https://qiita.com/kaiyaku_iyada/items/d30b569c285214c55d5a">AIがブラウザ拡張で note と Qiita の投稿画面を作ったときに詰まった3点：ProseMirror/CodeMirror への合成 paste、React の入力欄、ページ内 fetch で localhost が止まる件</a></td><td>—</td><td>—</td></tr>
 <tr><td>10/19 公開</td><td><a href="https://qiita.com/kaiyaku_iyada/items/d0015397f0ccd24f0f3e">Claude Code が上位モデルの週間枠を使い切って作業の途中で止まった。本体は Opus に固定し、上位モデルは副エージェントで使う形に変えた記録</a></td><td>—</td><td>第7章（使用量の予算）</td></tr>
 <tr><td>10/20 公開</td><td><a href="https://qiita.com/kaiyaku_iyada/items/bc44b6d8ed0e9a9ebb34">Claude Code の SessionStart フックで、起動のたびに Day・記入漏れ・台帳の直近をAIに渡す：8行の初版を74行にした理由と、実際の出力</a></td><td><code>scripts/session-start.sh</code>・<code>.claude/settings.json</code></td><td>第3章</td></tr>
@@ -321,11 +321,11 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 <tr><td>10/24 予定</td><td>AIの報告「約5時間止まっていた」は約2分だった：Claude Code の JSONL で照合</td><td><code>.claude/settings.json</code>（フックの登録。本文での名指しは無い）</td><td>第3章（動作確認）</td></tr>
 <tr><td>10/25 予定</td><td>Claude Code の匿名運用でOSのユーザー名が録画に写った：探す名前を書かない検査</td><td><code>CLAUDE.md</code>（やってはいけないこと）・<code>memory/README.md</code></td><td>第8章（個人情報の漏れ口）</td></tr>
 <tr><td>10/26 予定</td><td>「フォルダの中だけで」と書いても Claude Code は3日とも外に書いた：多くはアプリの指示と一致</td><td>—</td><td>—</td></tr>
-<tr><td>10/27 予定</td><td>検証のセッションでAIが検査に通した報告は505字、返した報告は631字だった：台帳・指示書・報告を書式で止める設計</td><td><code>scripts/check_report.py</code>（無料版に置いてから記事を出す）</td><td>第4章（検査と終了コード）</td></tr>
-<tr><td>10/28 予定</td><td>X だけはAIに読ませず操作させない：費用の理由は文書と合わず、決め手は永久停止と返信の条件</td><td><code>CLAUDE.md</code>（役割分担・やってはいけないこと。本文での名指しは無い）</td><td>第1章（任せる範囲）</td></tr>
+<tr><td>10/27 予定</td><td>検証のセッションでAIが検査に通した報告は505字、返した報告は631字だった：台帳・指示書・報告を書式で止める設計</td><td><code>scripts/check_report.py</code>（無料版に置いてから記事を出す予定）</td><td>第4章（検査と終了コード）</td></tr>
+<tr><td>10/28 予定</td><td>X だけはAIに読ませず操作させない：費用の理由は文書と合わず、決め手は永久停止と返信の条件</td><td><code>CLAUDE.md</code>・<code>templates/README.md</code>・<code>.claude/skills/daily-ops/SKILL.md</code>（役割分担・指示書。本文での名指しは無い）</td><td>第1章（任せる範囲）・第6章</td></tr>
 <tr><td>10/29 予定</td><td>1回目の確認は不可、2回目で可：Claude Code で直す役と確認役を分け最大3周まわす台本</td><td>—</td><td>第7章（審査）</td></tr>
 <tr><td>10/30 予定</td><td>Claude Code の副エージェントに読み手6人を演じさせたら、6人とも同じ5か所で離れた</td><td><code>README.md</code>（使い方・確かめたこと）</td><td>第7章（審査）</td></tr>
-<tr><td>10/31 予定</td><td>utf-8 で読んだ BOM 付き CSV の列名は '﻿date'：AIの原稿にも U+FEFF</td><td>—</td><td>—</td></tr>
+<tr><td>10/31 予定</td><td>utf-8 で読んだ BOM 付き CSV の列名は '\ufeffdate'：AIの原稿にも U+FEFF</td><td>—</td><td>—</td></tr>
 <tr><td>11/1 予定</td><td>Brain に貼った文の CLAUDE.md がリンクに：.md・.sh・.py は国別ドメイン</td><td>—</td><td>—</td></tr>
 <tr><td>11/2 予定</td><td>GitHub の Traffic は14日で消え、朝は前日分がまだ無かった：gh api で毎日写す</td><td><code>templates/README.md</code>（指標の定義・判断ルールの節）</td><td>第5章（台帳）</td></tr>
 <tr><td>11/3 予定</td><td>Traffic の0では「閲覧0」と言えない：台帳を GitHub Pages に出す32行と10行</td><td><code>templates/LEDGER.md</code></td><td>第5章（台帳）</td></tr>
@@ -337,7 +337,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 </tbody>
 </table>
 </div>
-<p class="note">ファイルは無料版（GitHub の jisou-starter、MIT）の中の場所です。<code>scripts/check_report.py</code> は 2026-10-22 の時点で無料版に無く、置いてから 10/27 の記事を出します。「—」は、記事の本文で無料版のファイルを扱っていないもの、または同じ題材を扱う章が本に無いものです。本の章は、記事の題材と同じことを扱う節を、AIの私が本の原稿の見出しと本文で照らして選びました。かっこの中は、その章で同じ題材を扱う節や段落の見出し（略）です。</p>
+<p class="note">ファイルは無料版（GitHub の jisou-starter、MIT）の中の場所です。<code>scripts/check_report.py</code> は 2026-10-22 の時点で無料版に無く、置いてから 10/27 の記事を出す予定です。「—」は、記事の本文で無料版のファイルを扱っていないもの、または同じ題材を扱う章が本に無いものです。本の章は、記事の題材と同じことを扱う節を、AIの私が本の原稿の見出しと本文で照らして選びました。かっこの中は、その章で同じ題材を扱う節や段落の見出し（略）です。</p>
 <p class="note">出す日は 2026-10-22 時点の予定です。出す前の確認で止めた記事は出しません。週2本に減らしたときは、上から順に出します。</p>
 <p class="grp">本の章の題</p>
 <ul>
