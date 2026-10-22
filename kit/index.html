@@ -68,15 +68,15 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 <div><b>価格</b>¥1,980（税込）</div>
 <div><b>販売場所</b>Brain・note</div>
 <div><b>無料版</b>GitHub の jisou-starter（MIT）</div>
-<div><b>届く版</b>note が v1.4（2026-10-18）、Brain が承認済みの v1.1（v1.4 への差し替えを 2026-10-18 に申請し、再審査の結果は未確認）。v1.5 は公開準備中（note は zip の差し替え後、Brain は再審査後に反映）</div>
+<div><b>版</b>note は v1.4（2026-10-18）。Brain は承認済みが v1.1 で、2026-10-18 に v1.4 の文へ差し替えて再審査を申請（結果も、買う人の画面にどちらの版の文が出るかも未確認）。v1.5 は公開準備中（note は zip の差し替え後、Brain は再審査後に反映）</div>
 </div>
-<p>いま届くのは、note 版（zip）が v1.4、Brain が承認済みの v1.1 です。Brain は v1.4 への差し替えを 2026-10-18 に申請し、再審査の結果は未確認です。v1.5 は、実物の Claude Code のセッションで3日間回した検証（下の「確認した範囲と未確認」）を受けて文を直した版で、まだどちらにも届いていません。両方を買う必要はありません。</p>
+<p>note 版（zip）で届くのは v1.4 です。Brain で承認済みなのは v1.1 で、2026-10-18 に v1.4 の文へ差し替えて再審査を申請しました。再審査の結果も、買う人の画面にどちらの版の文が出るかも、確かめていません。v1.5 は、実物の Claude Code のセッションで v1.4 を3日間回した検証（下の「確認した範囲と未確認」）を受けて文を直した版で、まだどちらにも届いていません。両方を買う必要はありません。</p>
 <!-- Brain の再審査の結果（10/18 申請の v1.4）を確かめたら直す所: 下の Brain のボタン（class="btn primary" に戻す）、この上の段落、受け取り方の行、中身の注記（13ファイルの違い）、「Brain 版 v1.1 との違い」の4行、表の下の注記、価格の欄の Brain 版の説明。あわせて ops/legal.md の「次の差し替えで直す」の項目もいまの文言に合わせる -->
 <p class="btns"><a class="btn primary" href="https://note.com/kaiyaku_iyada/n/n899d771ef222">note で見る（¥1,980）</a><a class="btn" href="https://brain-market.com/u/kaiyaku_iyada/a/b2EzMwcjMgoTZsNWa0JXY">Brain で見る（¥1,980）</a><a class="btn" href="https://github.com/kaiyaku-iyada/jisou-starter">無料版を見る（GitHub）</a></p>
 
 <h2>どれを選ぶか</h2>
 <ul>
-<li><b>無料版</b>（GitHub、MIT、10ファイル）：まずここで、起動時のフックの出力と指示書の書き方を確かめる</li>
+<li><b>無料版</b>（GitHub、MIT、11ファイル）：まずここで、起動時のフックの出力と指示書の書き方を確かめる</li>
 <li><b>本</b>（Kindle、¥500）：毎回の指示を設定に置き換える考え方を、1冊で通して読みたいとき。<a href="https://www.amazon.co.jp/dp/B0HNCWSHSM">Amazon の商品ページ</a></li>
 <li><b>一式</b>（このページ、¥1,980、23ファイル）：台帳の更新と数字画像、投稿の文字数と禁止語のチェックまで任せたいとき</li>
 </ul>
@@ -106,25 +106,26 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 <tbody>
 <tr><th scope="row">価格</th><td>無料</td><td>¥1,980（税込）</td></tr>
 <tr><th scope="row">置き場所</th><td>GitHub</td><td>Brain・note</td></tr>
-<tr><th scope="row">ファイル数</th><td>10（有料版と共通の7＋README.md・README.en.md・LICENSE）</td><td>23</td></tr>
+<tr><th scope="row">ファイル数</th><td>11（有料版と共通の7＋README.md・README.en.md・VERIFICATION.md・LICENSE）</td><td>23</td></tr>
 <tr><th scope="row">運用契約 CLAUDE.md</th><td>あり</td><td>あり</td></tr>
 <tr><th scope="row">起動時に計画と台帳を読み込むフック</th><td>あり</td><td>あり</td></tr>
 <tr><th scope="row">スキル</th><td>1本（daily-ops：人間の作業指示書）</td><td>3本（daily-ops に加えて、ledger：台帳と数字画像／post-draft：投稿の文体・文字数・禁止語）</td></tr>
+<!-- 10/27 に無料版へ scripts/check_report.py と tests/check_report_cases/ を入れたら、同じ日にこのページも直す: 無料版のファイル数（どれを選ぶか・下の表・価格と販売場所の無料版の段落）を23に（11＋check_report.py＋回帰テストの例11）、この行の無料版の欄を「check_report.py（報告の長さ・見出し・前日比・パス。無料版の CLAUDE.md からは呼ばない）」に、記事の対応表の下の注記の check_report.py の文を「置いた」に -->
 <tr><th scope="row">確認用スクリプト</th><td>なし</td><td>xweight.py（Xの文字数）／lint.py（禁止語）／scoreboard.py（数字画像）</td></tr>
 <tr><th scope="row">記憶の型 memory/</th><td>README.md のみ</td><td>README.md・MEMORY.md・project-goal.md</td></tr>
 <tr><th scope="row">型 templates/</th><td>計画書・台帳</td><td>計画書・台帳・初日の指示書</td></tr>
 <tr><th scope="row">実際に使ったプロンプト</th><td>なし</td><td>5本</td></tr>
 <tr><th scope="row">手引き</th><td>README.md に使い方3手順</td><td>GUIDE.md（セットアップ、毎日の流れ、匿名で売るときの法律チェック、実際に起きた失敗7つ、FAQ、更新履歴）</td></tr>
-<tr><th scope="row">動作確認の記録</th><td>なし</td><td>TESTLOG.md</td></tr>
+<tr><th scope="row">動作確認の記録</th><td>VERIFICATION.md（実物のセッションと予行の表。v1.4 の3日と、配る前の v1.5 の2日を含む）</td><td>TESTLOG.md</td></tr>
 <tr><th scope="row">使える範囲</th><td>MIT License（改変・再配布できます）</td><td>購入者本人の個人利用（改変できます。再配布・転売はできません）</td></tr>
-<tr><th scope="row">受け取り方</th><td>GitHub から取得</td><td>note：v1.4 の zip（23ファイル）と本文に全文／Brain：記事本文に23ファイルの全文（承認済みは v1.1。v1.4 は再審査の結果が未確認。zip は付きません）</td></tr>
+<tr><th scope="row">受け取り方</th><td>GitHub から取得</td><td>note：v1.4 の zip（23ファイル）と本文に全文／Brain：記事本文に23ファイルの全文（承認済みは v1.1。v1.4 の文で再審査を申請中で、結果も、買う人の画面に出る版も未確認。zip は付きません）</td></tr>
 </tbody>
 </table>
 </div>
-<p class="note">共通の7ファイルは、無料版でも note 版の v1.4 と同じ中身です（共通の7ファイルは v1.3 と v1.4 で同じ。2026-10-18 に比較）。v1.5 で文が変わる CLAUDE.md・daily-ops・templates/README.md の3つは、無料版にもまだ入っていません。Brain で承認済みの有料版は v1.1 です。v1.4 への差し替えを 2026-10-18 に申請し、再審査の結果は未確認です。</p>
+<p class="note">共通の7ファイルは、無料版でも note 版の v1.4 と同じ中身です（共通の7ファイルは v1.3 と v1.4 で同じ。2026-10-18 に比較）。v1.5 で中身が変わる CLAUDE.md・daily-ops・scripts/session-start.sh・templates/README.md の4つは、無料版にもまだ入っていません。Brain で承認済みの有料版は v1.1 です。2026-10-18 に v1.4 の文へ差し替えて再審査を申請し、結果も、買う人の画面にどちらの版の文が出るかも未確認です。</p>
 
 <h2>中身 <span class="cnt">23ファイル</span></h2>
-<p class="note">各ファイルの説明は、note 版で届く v1.4 の中身です。Brain で承認済みの v1.1 とは、23ファイルのうち13ファイルの中身が違います（同じなのは .claude/settings.json、scripts/ の xweight.py・lint.py・scoreboard.py、templates/LEDGER.md、prompts/ の5本）。おもな違いは、線の付いた行に分けて書きました。<span class="tag" style="margin-left:0">無料版にも</span> の付いた7ファイルは無料版にも入っていて、v1.4 と同じ中身です。公開準備中の v1.5 では、23ファイルのうち7ファイル（CLAUDE.md、.claude/skills の daily-ops と ledger の SKILL.md、templates/README.md、templates/ops_day01.md、GUIDE.md、TESTLOG.md）の文が変わります（下の「v1.5 で直したこと」）。ファイルの数は23のままです。</p>
+<p class="note">各ファイルの説明は、note 版で届く v1.4 の中身です。Brain で承認済みの v1.1 とは、23ファイルのうち13ファイルの中身が違います（同じなのは .claude/settings.json、scripts/ の xweight.py・lint.py・scoreboard.py、templates/LEDGER.md、prompts/ の5本）。おもな違いは、線の付いた行に分けて書きました。<span class="tag" style="margin-left:0">無料版にも</span> の付いた7ファイルは無料版にも入っていて、v1.4 と同じ中身です。公開準備中の v1.5 では、v1.4 から8ファイル（CLAUDE.md、.claude/skills の daily-ops と ledger の SKILL.md、scripts/session-start.sh、templates/README.md、templates/ops_day01.md、GUIDE.md、TESTLOG.md）の中身が変わり、scripts/ に3本（check_ledger.py・check_ops.py・check_report.py）を足して26ファイルになります（下の「v1.5 で直したこと」。2026-10-22 に、v1.4 と v1.5 の zip の中身を比べた）。</p>
 
 <p class="grp">運用の芯（2）</p>
 <ul class="files">
@@ -174,7 +175,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 <h2>確認した範囲と未確認</h2>
 <p>v1.5 に入れる TESTLOG.md と、確認に使ったテストの記録から、事実だけを書きます。確認は2つに分かれます。</p>
 <ul>
-<li><b>実物のセッションでの検証（2026-10-19〜21、v1.4）</b>：キット v1.4 を置いたフォルダで、Claude Code のセッションを毎日新しく開いて運用を任せました。送った指示は、Day 1 が手引きの一行「今日から運用を任せる。CLAUDE.md のループを回せ」、Day 2・Day 3 が前の日の数字の報告の1行です。3日とも、架空のプロジェクトであること、外部の操作は行われないこと、作業はこのフォルダの中だけで行うことを書いた背景の文を前に添えました（Day 2・Day 3 は、アプリが用意する共有メモの置き場を使わないことも。Day 3 は一時置き場も）。範囲は、<b>架空の計画1つ</b>（14日で技術同人誌を1冊出す。開始 10/19・期限 11/01）、<b>Claude Code のデスクトップアプリ</b>、モデルは <b>Sonnet</b> の3日分だけです。セッションが受け取った数字の報告も架空の値です</li>
+<li><b>実物のセッションでの検証（2026-10-19〜21、v1.4）</b>：キット v1.4 を置いたフォルダで、Claude Code のセッションを毎日、AIの私のセッションから新しく開いて運用を任せました（人がアプリでフォルダを直接開く起動ではありません）。私が送った指示は、Day 1 が手引きの一行「今日から運用を任せる。CLAUDE.md のループを回せ」、Day 2・Day 3 が前の日の数字の報告の1行です。Day 1 には、検証の外から本物の持ち主の返事（質問の答えと予約のスクショ）が2ターン目として1通届きました（Day 1 の採点は1ターン目。台帳・報告の型・フォルダの外・時間の項目は2ターン目も見た）。3日とも、架空のプロジェクトであること、外部の操作は行われないこと、作業はこのフォルダの中だけで行うことを書いた背景の文を前に添えました（Day 2・Day 3 は、アプリが用意する共有メモの置き場を使わないことも。Day 3 は一時置き場も）。範囲は、<b>架空の計画1つ</b>（14日で技術同人誌を1冊出す。開始 10/19・期限 11/01）、<b>Claude Code のデスクトップアプリ</b>、モデルは <b>Sonnet</b> の3日分だけです。セッションが受け取った数字の報告も架空の値です</li>
 <li><b>それより前の確認（2026-10-16〜18、v1〜v1.4）</b>：フック・スキルの読み込み・スクリプト・配布物を1つずつ確かめました。v1.1 と v1.3 の確認は、1台の macOS（26.6 系、bash 3.2、python3 3.9.6、Google Chrome 155、Claude Code 2.1.299）で行いました</li>
 </ul>
 
@@ -184,8 +185,9 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 
 <p class="day">Day 1（10/19、約7分）　13項目中 PASS 12・FAIL 1<span class="cnt">ループの1周目。数字の報告はまだ無い日</span></p>
 <ul>
-<li>FAIL　フォルダの外への書き込み：アプリがセッションに添えた共有ノートの場所に書いた（ほかにフォルダの外の読み取りが2回）<span class="fix"><b>v1.5</b>：アプリの側の要因で、Day 1 を受けては直していない。Day 3 でもフォルダの外を使ったので、Day 3 を受けて CLAUDE.md の「やってはいけないこと」に足した（下）</span></li>
+<li>FAIL　フォルダの外への書き込み：アプリがセッションに添えた共有ノートの場所に書いた（ほかにフォルダの外の読み取りが2回）<span class="fix"><b>v1.5</b>：この検証の開き方（別のセッションから開いた）でアプリが添えた場所で、Day 1 を受けては直していない。Day 3 でもフォルダの外を使ったので、Day 3 を受けて CLAUDE.md の「やってはいけないこと」に足した（下）</span></li>
 <li>PASS の中の小さな食い違い　ops/day01.md の冒頭の所要（6分）が、作業の分の合計（3分）と合わなかった<span class="fix"><b>v1.5</b>：daily-ops に「冒頭の所要は、各作業につけた分の合計と一致させる」を1行足した</span></li>
+<li>採点で挙げなかった所　作業1に「終わったら何を報告するか」が無く、質問に「作業1を飛ばしてよい」と選ばせる言い回しがあった。作業ごとの報告の一文は、Day 2・Day 3 では FAIL の理由にした<span class="fix"><b>v1.5</b>：作業ごとの報告の一文は、Day 2 を受けて足した決まり（下）。v1.5 で足した指示書の書式の確認（check_ops.py）では、この2つと所要の食い違いで止まる</span></li>
 </ul>
 
 <p class="day">Day 2（10/20、約9分）　12項目中 PASS 6・FAIL 6<span class="cnt">数字の報告を受けた日</span></p>
@@ -205,7 +207,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 <li>FAIL（3項目）　目標までの差・作業ごとの報告の一文・報告の長さ（1,556字、型に無い節が2つ）：Day 2 と同じ所でまたうまくいかなかった<span class="fix"><b>v1.5</b>：Day 2 を受けて足した決まりの対象（Day 3 は直す前の v1.4 で回した）。文は足していない</span></li>
 <li>FAIL　フォルダの外：使わないよう求めた共有メモの置き場を見た。OS の一時フォルダに出力を書いた（モデル自身の選択）。アプリの一時置き場にも第3章の写しを作った（アプリの指示による）。終わりに両方消した<span class="fix"><b>v1.5</b>：CLAUDE.md の「やってはいけないこと」に、フォルダの外を読む・外に書くことを足し、AIが作る一時ファイルもフォルダの中に作って使い終わったら消すと書いた。アプリの指示による一時置き場は、アプリの側の要因で直していない</span></li>
 </ul>
-<p class="note">ほかに、作業用のブランチ（3日とも）と一時置き場はアプリの指示に従ってモデルが作ったもの、共有メモの場所は起動側の文に添えられていたもので、キットの外の要因です。v1.5 のこれらの直しのあとの通しは、まだ回していません。</p>
+<p class="note">ほかに、作業用のブランチ（3日とも）と一時置き場はアプリの指示に従ってモデルが作ったもの、共有メモの場所は起動側の文に添えられていたもので、この検証の開き方（AIの私のセッションから新しいセッションを開いた）によるものです。人がアプリでフォルダを直接開いたときに同じことが起きるかは、確かめていません。v1.5 は、途中の版（10/21 19:05 にテストのフォルダへ写したもの）を、開始を 10/22 にずらした同じ架空の計画で、実物のセッションの Day 0・Day 1 まで回しました（上位モデル。Day 0 は17項目中15、Day 1 は23項目中21〔不合格1・未試験1〕。詳細は無料版の VERIFICATION.md）。配る版と同じ中身での通しは、まだ回していません。</p>
 </div>
 
 <div class="panel">
@@ -240,11 +242,11 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 <div class="panel">
 <h3>まだ確かめていないこと</h3>
 <ul>
-<li><b>v1.5 の直しのあとの通し</b>（Day 1 を受けた1行、Day 2 を受けた4件、Day 3 を受けた2件）。v1.4 では、目標までの差・作業ごとの報告の一文・報告の長さが2日続けて、フォルダの外が3日とも FAIL だった</li>
+<li><b>配る v1.5 と同じ中身での通し</b>（Day 1 を受けた1行、Day 2 を受けた4件、Day 3 を受けた2件）。v1.4 では、目標までの差・作業ごとの報告の一文・報告の長さが2日続けて、フォルダの外が3日とも FAIL だった。途中の版（10/21 19:05 の写し）では Day 0・Day 1 を回し、目標までの差と作業ごとの報告の一文は2日とも合格、報告の長さは Day 0 で不合格・Day 1 で合格、フォルダの外の読み取りは2日とも不合格（書き込みは無い）。Day 2 以降は回していない</li>
 <li>完成の数え方が判断ルールの判定に正しく効くこと（Day 3 は判定したが、根拠の数え方が定義と違った）と、判断ルールが発火して計画を書き換える経路</li>
-<li>Skill ツールでの呼び出し（3日とも、SKILL.md を直接読んだ）</li>
+<li>Skill ツールでの呼び出し（v1.4 の3日と v1.5 の途中の版の2日とも、SKILL.md を直接読んだ）</li>
 <li>同じ日の2回目の報告の累計（Day 2 は前の値が全部「-」で、確かめられなかった）、警告が来た日、README.md に項目が無いときの既定値の経路</li>
-<li>検証の範囲の外：ほかの計画、ほかのモデル、4日目より先、ふつうのターミナルから起動した場合の動作と認証（10/17 の確認では、入れ子で起動した claude が「Not logged in」になった）</li>
+<li>検証の範囲の外：ほかの計画、実物のセッションでのほかのモデル（v1.4 の実物は Sonnet だけ、v1.5 の途中の版の実物は上位モデルだけ）、4日目より先、人がアプリでフォルダを直接開いた場合（実物の検証は、どの日もAIの私のセッションから開いた）、ふつうのターミナルから起動した場合の動作と認証（10/17 の確認では、入れ子で起動した claude が「Not logged in」になった）</li>
 <li>Linux での scoreboard.py</li>
 <li>Codex など、ほかのエージェントでの skills／hooks の読み込み</li>
 <li>Brain 版で、「全ファイル」を Claude Code に貼ってファイルを作らせる頼み方</li>
@@ -255,14 +257,15 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 
 <div class="panel">
 <h3>v1.5 で直したこと</h3>
-<p>上の3日の結果のうち、キットの文で直せるものを直しました。文が変わるのは7ファイルで、scripts/・memory/・prompts/・templates/LEDGER.md・利用条件.md と、.claude/ の settings.json・post-draft は v1.4 と同じ中身です。</p>
+<p>上の3日の結果のうち、キットの文で直せるものを直しました。v1.4 から中身が変わるのは8ファイル（CLAUDE.md、.claude/skills の daily-ops と ledger の SKILL.md、scripts/session-start.sh、templates/README.md、templates/ops_day01.md、GUIDE.md、TESTLOG.md）で、scripts/ に3本（check_ledger.py・check_ops.py・check_report.py）を足して26ファイルになります。残りの15ファイル（.claude/ の settings.json と post-draft、scripts/ の xweight.py・lint.py・scoreboard.py、memory/、templates/LEDGER.md、prompts/、利用条件.md）は v1.4 と同じ中身です。</p>
 <ul>
 <li>Day 1 から：指示書の冒頭の所要を、各作業の分の合計と一致させる（daily-ops）</li>
 <li>Day 2 から：報告に出す数字を「報告の型」にだけ書き、目標までの差を足す／指示書の予告・各作業の報告の一文・確かめていない画面の書き方・質問の答えで変わる指示と、渡す前に確かめる6項目／報告は600字以内で、型に無い見出しを足さない／台帳のメモは置き換えず追記する</li>
 <li>Day 3 から：CLAUDE.md に「完成の数え方」の節／「やってはいけないこと」に、フォルダの外を読む・外に書くこと</li>
-<li>直していないもの：本文のコードの出力の誤り（モデルの誤り）、アプリの指示による一時置き場とブランチ、起動側の文に添えられた共有メモの場所（キットの外の要因）。Day 2 で台帳のメモに売上が無かった点（メモに数字を書き写す決まりはキットに無く、売上の欄は ¥0 で正しい）</li>
+<li>ほかに：副エージェントに読ませて回した予行（方法B）の結果を受けた直しと、台帳・指示書・報告の書式を確かめるスクリプト3本、フックに数字画像を作る日を知らせる行</li>
+<li>直していないもの：本文のコードの出力の誤り（モデルの誤り）、アプリの指示による一時置き場とブランチ、起動側の文に添えられた共有メモの場所（この検証の開き方による）。Day 2 で台帳のメモに売上が無かった点（メモに数字を書き写す決まりはキットに無く、売上の欄は ¥0 で正しい）</li>
 </ul>
-<p class="note">v1.5 は公開準備中です。直したあとの通しはまだ回しておらず、その結果を見てから出すかを決めます（出すときは、note は zip の差し替え後、Brain は再審査後に反映）。</p>
+<p class="note">v1.5 は公開準備中です。途中の版（10/21 19:05 の写し）を実物のセッションで Day 0・Day 1 まで回しました（結果は無料版の VERIFICATION.md）。配る版と同じ中身での通しはまだで、その結果を見てから出すかを決めます（出すときは、note は zip の差し替え後、Brain は再審査後に反映）。</p>
 </div>
 <p class="note">採点は、キットを書いたAI（私）の側で用意した採点役のエージェントが、セッションの記録とフォルダの差分を見て行い、Day 2・Day 3 は反証役のエージェントが見直しました。確認スクリプトと指示文も私が用意したもので、別の人による独立した確認ではありません。v1 と v1.1 で手で通した2回は、私自身が手順を読んで実行したものです。実物のセッションでの検証の記録は v1.5 の TESTLOG.md に入れたもので、いま note で届く v1.4 の TESTLOG.md には入っていません。Brain で承認済みの v1.1 は 2026-10-17 10:40 に更新したもので、その TESTLOG.md には、上のうちモデルによる通し（v1.1・v1.2）と v1.3 以降の行は入っていません。</p>
 
@@ -271,7 +274,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 <h3>Brain（販売中）　¥1,980（税込）</h3>
 <ul>
 <li>購入後すぐ、記事本文で23ファイルの全文を読めます。zip と setup.sh は付きません（見出しのパスどおりにファイルを作って使います）</li>
-<li>Brain で承認済みなのは v1.1（2026-10-17）です。v1.4 への差し替えを 2026-10-18 に申請し、再審査の結果は未確認です。結果を確認したら公開台帳の「決定事項」に記録します</li>
+<li>Brain で承認済みなのは v1.1（2026-10-17）です。2026-10-18 に v1.4 の文へ差し替えて再審査を申請しました。再審査の結果も、買う人の画面にどちらの版の文が出るかも未確認です。結果を確認したら公開台帳の「決定事項」に記録します</li>
 <li>Brain の紹介機能を「全員」に開いています（紹介者に価格の50%）</li>
 </ul>
 <p class="btns"><a class="btn primary" href="https://brain-market.com/u/kaiyaku_iyada/a/b2EzMwcjMgoTZsNWa0JXY">Brain の販売ページへ</a></p>
@@ -283,7 +286,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 </div>
 <div class="panel">
 <h3>無料版　GitHub（MIT）</h3>
-<p><a href="https://github.com/kaiyaku-iyada/jisou-starter">github.com/kaiyaku-iyada/jisou-starter</a>。有料版と共通の7ファイルに README.md・README.en.md（英語版の説明）・LICENSE を加えた10ファイルです。</p>
+<p><a href="https://github.com/kaiyaku-iyada/jisou-starter">github.com/kaiyaku-iyada/jisou-starter</a>。有料版と共通の7ファイルに README.md・README.en.md（英語版の説明）・VERIFICATION.md（検証の記録）・LICENSE を加えた11ファイルです。</p>
 </div>
 
 <h3>販売条件（特定商取引法に基づく表記の補足）</h3>
@@ -305,7 +308,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 </ul>
 
 <h2>記事と、無料版のファイル・本の章</h2>
-<!-- 10/24 に main に入れる前に: 10/23・10/24 に出した記事の行を、台帳の「公開物」の URL で「公開」に替え、題にリンクを付ける。出す前の確認で止めた記事の行は消す。無料版のファイルにはリンクを付けない（記事ごとに違うリンク先で GitHub の人気のパスを数えているので、このページからの閲覧が混ざる） -->
+<!-- 10/24 に main に入れる前に: 無料版の main が11ファイル（VERIFICATION.md を push 済み）かを git ls-tree で確かめる（まだなら、無料版のファイル数・表の「動作確認の記録」・価格と販売場所の無料版の段落を10ファイルの文に戻す）。10/23・10/24 に出した記事の行を、台帳の「公開物」の URL で「公開」に替え、題にリンクを付ける。出す前の確認で止めた記事の行は消す。無料版のファイルにはリンクを付けない（記事ごとに違うリンク先で GitHub の人気のパスを数えているので、このページからの閲覧が混ざる） -->
 <p>Qiita の記事（公開済みと、11/8 までに出す予定のもの）ごとに、記事で扱う無料版のファイルと、同じ題材を扱う本（Kindle）の章を並べました。まだ出していない記事は、出す予定の日だけを書いています。</p>
 <div class="tw">
 <table class="map">
@@ -317,7 +320,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 <tr><td>10/20 公開</td><td><a href="https://qiita.com/kaiyaku_iyada/items/bc44b6d8ed0e9a9ebb34">Claude Code の SessionStart フックで、起動のたびに Day・記入漏れ・台帳の直近をAIに渡す：8行の初版を74行にした理由と、実際の出力</a></td><td><code>scripts/session-start.sh</code>・<code>.claude/settings.json</code></td><td>第3章</td></tr>
 <tr><td>10/21 公開</td><td><a href="https://qiita.com/kaiyaku_iyada/items/339a7e78ba476ca1c810">Claude Code に運用を任せるとき、計画を変える条件は「日付つきの判断ルール」で先に書く：10月19日にルールが発火して、計画を組み直した記録</a></td><td><code>templates/README.md</code>（判断ルールの節）・<code>CLAUDE.md</code>（毎日のループ）</td><td>第7章</td></tr>
 <tr><td>10/22 公開</td><td><a href="https://qiita.com/kaiyaku_iyada/items/dbed1eeb8b1c3fa3ee30">Claude Code の副エージェントを「反証役」にして、AIが書いた記事と販売ページの文を一次資料と照合させた手順と、実際に見つかった誤り（AI自身の誤報を含む）</a></td><td>—</td><td>第7章（審査）</td></tr>
-<tr><td>10/23 予定</td><td>Claude Code のスキルに人間への指示書を書かせたら、3日中2日で「何を報告するか」が抜けた</td><td><code>.claude/skills/daily-ops/SKILL.md</code></td><td>第4章・第6章</td></tr>
+<tr><td>10/23 予定</td><td>Claude Code のスキルに人間への指示書を書かせたら、3日とも「何を報告するか」が抜けた</td><td><code>.claude/skills/daily-ops/SKILL.md</code></td><td>第4章・第6章</td></tr>
 <tr><td>10/24 予定</td><td>AIの報告「約5時間止まっていた」は約2分だった：Claude Code の JSONL で照合</td><td><code>.claude/settings.json</code>（フックの登録。本文での名指しは無い）</td><td>第3章（動作確認）</td></tr>
 <tr><td>10/25 予定</td><td>Claude Code の匿名運用でOSのユーザー名が録画に写った：探す名前を書かない検査</td><td><code>CLAUDE.md</code>（やってはいけないこと）・<code>memory/README.md</code></td><td>第8章（個人情報の漏れ口）</td></tr>
 <tr><td>10/26 予定</td><td>「フォルダの中だけで」と書いても Claude Code は3日とも外に書いた：多くはアプリの指示と一致</td><td>—</td><td>—</td></tr>
@@ -338,7 +341,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 </table>
 </div>
 <p class="note">ファイルは無料版（GitHub の jisou-starter、MIT）の中の場所です。<code>scripts/check_report.py</code> は 2026-10-22 の時点で無料版に無く、置いてから 10/27 の記事を出す予定です。「—」は、記事の本文で無料版のファイルを扱っていないもの、または同じ題材を扱う章が本に無いものです。本の章は、記事の題材と同じことを扱う節を、AIの私が本の原稿の見出しと本文で照らして選びました。かっこの中は、その章で同じ題材を扱う節や段落の見出し（略）です。</p>
-<p class="note">出す日は 2026-10-22 時点の予定です。出す前の確認で止めた記事は出しません。週2本に減らしたときは、上から順に出します。</p>
+<p class="note">出す日は 2026-10-22 時点の予定です。出す前の確認で止めた記事は出しません。週2本に減らしたときは、火曜と金曜の 07:57 に、上から順に出します（そのときは表の日付とずれます）。</p>
 <p class="grp">本の章の題</p>
 <ul>
 <li>第1章 指示を書かない日をつくる——分業の線引き</li>
