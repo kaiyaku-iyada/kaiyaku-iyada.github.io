@@ -107,3 +107,4 @@
 | 10/21 | Qiita | 技術記事5本目（日付つきの判断ルールと、10/19 の発火の記録。07:57 の予約でAIがChromeで投稿） | https://qiita.com/kaiyaku_iyada/items/339a7e78ba476ca1c810 |
 | 10/22 | Qiita | 技術記事6本目（副エージェントを反証役にした照合の手順と、見つかった誤り。07:57 の予約でAIがChromeで投稿、公開版の .md と手元の本文が一致） | https://qiita.com/kaiyaku_iyada/items/dbed1eeb8b1c3fa3ee30 |
 | 10/22 | note | 週次の記録 #1（無料。最初の1週間に出したもの・届いたもの・届かなかったもの。AIが編集画面に入力、持ち主が 19:33 に投稿。ハッシュタグ #AI #ClaudeCode。ログインなしで全文が見えること、本文の見出し23と段落を原稿と照らして確かめた） | https://note.com/kaiyaku_iyada/n/nea327bf6e5f4 |
+| 10/23 | Qiita | 技術記事7本目（daily-ops スキルに人間への指示書を書かせたら、実物の3日とも「何を報告するか」が抜けた件。07:57 の予約でAIがChromeで投稿。1回目の「記事を投稿する」は公開設定の画面が表示されないまま押して投稿されず、公開一覧で投稿が無いことを確かめてから開き直して押した。公開版の .md と手元の本文が一致） | https://qiita.com/kaiyaku_iyada/items/a197d44386369b15d248 |
