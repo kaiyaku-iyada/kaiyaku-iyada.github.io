@@ -307,7 +307,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 </ul>
 
 <h2>記事と、無料版のファイル・本の章</h2>
-<!-- 10/24 に main に入れる前に: 無料版の main が11ファイル（VERIFICATION.md を push 済み）かを git ls-tree で確かめる（まだなら、無料版のファイル数・表の「動作確認の記録」・価格と販売場所の無料版の段落を10ファイルの文に戻す）。10/23・10/24 に出した記事の行を、台帳の「公開物」の URL で「公開」に替え、題にリンクを付ける。出す前の確認で止めた記事の行は消す。無料版のファイルにはリンクを付けない（記事ごとに違うリンク先で GitHub の人気のパスを数えているので、このページからの閲覧が混ざる） -->
+<!-- 10/24 に main に入れる前に: 無料版の main が11ファイル（VERIFICATION.md を push 済み）かを git ls-tree で確かめる（まだなら、無料版のファイル数・表の「動作確認の記録」・価格と販売場所の無料版の段落を10ファイルの文に戻す）。記事を出したら、その行を台帳の「公開物」の URL で「公開」に替え、題にリンクを付ける（10/23・10/24 の行は 10/24 に替えた）。出す前の確認で止めた記事の行は消す。出す日の並びは 10/24 の差し替え（台帳の決定事項 10/24 昼過ぎ）に合わせた。無料版のファイルにはリンクを付けない（記事ごとに違うリンク先で GitHub の人気のパスを数えているので、このページからの閲覧が混ざる） -->
 <p>Qiita の記事（公開済みと、11/8 までに出す予定のもの）ごとに、記事で扱う無料版のファイルと、同じ題材を扱う本（Kindle）の章を並べました。まだ出していない記事は、出す予定の日だけを書いています。</p>
 <div class="tw">
 <table class="map">
@@ -319,28 +319,28 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 <tr><td>10/20 公開</td><td><a href="https://qiita.com/kaiyaku_iyada/items/bc44b6d8ed0e9a9ebb34">Claude Code の SessionStart フックで、起動のたびに Day・記入漏れ・台帳の直近をAIに渡す：8行の初版を74行にした理由と、実際の出力</a></td><td><code>scripts/session-start.sh</code>・<code>.claude/settings.json</code></td><td>第3章</td></tr>
 <tr><td>10/21 公開</td><td><a href="https://qiita.com/kaiyaku_iyada/items/339a7e78ba476ca1c810">Claude Code に運用を任せるとき、計画を変える条件は「日付つきの判断ルール」で先に書く：10月19日にルールが発火して、計画を組み直した記録</a></td><td><code>templates/README.md</code>（判断ルールの節）・<code>CLAUDE.md</code>（毎日のループ）</td><td>第7章</td></tr>
 <tr><td>10/22 公開</td><td><a href="https://qiita.com/kaiyaku_iyada/items/dbed1eeb8b1c3fa3ee30">Claude Code の副エージェントを「反証役」にして、AIが書いた記事と販売ページの文を一次資料と照合させた手順と、実際に見つかった誤り（AI自身の誤報を含む）</a></td><td>—</td><td>第7章（審査）</td></tr>
-<tr><td>10/23 予定</td><td>Claude Code のスキルに人間への指示書を書かせたら、3日とも「何を報告するか」が抜けた</td><td><code>.claude/skills/daily-ops/SKILL.md</code></td><td>第4章・第6章</td></tr>
-<tr><td>10/24 予定</td><td>AIの報告「約5時間止まっていた」は約2分だった：Claude Code の JSONL で照合</td><td><code>.claude/settings.json</code>（フックの登録。本文での名指しは無い）</td><td>第3章（動作確認）</td></tr>
+<tr><td>10/23 公開</td><td><a href="https://qiita.com/kaiyaku_iyada/items/a197d44386369b15d248">Claude Code のスキルに人間への指示書を書かせたら、3日とも「何を報告するか」が抜けた</a></td><td><code>.claude/skills/daily-ops/SKILL.md</code></td><td>第4章・第6章</td></tr>
+<tr><td>10/24 公開</td><td><a href="https://qiita.com/kaiyaku_iyada/items/cbadd82923bd7fcee3b3">AIの報告「約5時間止まっていた」は約2分だった：Claude Code の JSONL で照合</a></td><td><code>.claude/settings.json</code>（フックの登録。本文での名指しは無い）</td><td>第3章（動作確認）</td></tr>
 <tr><td>10/25 予定</td><td>Claude Code の匿名運用でOSのユーザー名が録画に写った：探す名前を書かない検査</td><td><code>CLAUDE.md</code>（やってはいけないこと）・<code>memory/README.md</code></td><td>第8章（個人情報の漏れ口）</td></tr>
 <tr><td>10/26 予定</td><td>「フォルダの中だけで」と書いても Claude Code は3日とも外に書いた：多くはアプリの指示と一致</td><td>—</td><td>—</td></tr>
 <tr><td>10/27 予定</td><td>検証のセッションでAIが検査に通した報告は505字、返した報告は631字だった：台帳・指示書・報告を書式で止める設計</td><td><code>scripts/check_report.py</code>（無料版に置いてから記事を出す予定）</td><td>第4章（検査と終了コード）</td></tr>
 <tr><td>10/28 予定</td><td>X だけはAIに読ませず操作させない：費用の理由は文書と合わず、決め手は永久停止と返信の条件</td><td><code>CLAUDE.md</code>・<code>templates/README.md</code>・<code>.claude/skills/daily-ops/SKILL.md</code>（役割分担・指示書。本文での名指しは無い）</td><td>第1章（任せる範囲）・第6章</td></tr>
 <tr><td>10/29 予定</td><td>1回目の確認は不可、2回目で可：Claude Code で直す役と確認役を分け最大3周まわす台本</td><td>—</td><td>第7章（審査）</td></tr>
-<tr><td>10/30 予定</td><td>Claude Code の副エージェントに読み手6人を演じさせたら、6人とも同じ5か所で離れた</td><td><code>README.md</code>（使い方・確かめたこと）</td><td>第7章（審査）</td></tr>
-<tr><td>10/31 予定</td><td>utf-8 で読んだ BOM 付き CSV の列名は '\ufeffdate'：AIの原稿にも U+FEFF</td><td>—</td><td>—</td></tr>
-<tr><td>11/1 予定</td><td>Brain に貼った文の CLAUDE.md がリンクに：.md・.sh・.py は国別ドメイン</td><td>—</td><td>—</td></tr>
-<tr><td>11/2 予定</td><td>GitHub の Traffic は14日で消え、朝は前日分がまだ無かった：gh api で毎日写す</td><td><code>templates/README.md</code>（指標の定義・判断ルールの節）</td><td>第5章（台帳）</td></tr>
-<tr><td>11/3 予定</td><td>Traffic の0では「閲覧0」と言えない：台帳を GitHub Pages に出す32行と10行</td><td><code>templates/LEDGER.md</code></td><td>第5章（台帳）</td></tr>
-<tr><td>11/4 予定</td><td>Claude Code のワークフロー再開に失敗：journal は前のセッションのフォルダにあった</td><td>—</td><td>—</td></tr>
-<tr><td>11/5 予定</td><td>販売ページの言い切りを止める assert が python3 -O で消えた：10通り崩した結果</td><td>—</td><td>第4章・第8章</td></tr>
-<tr><td>11/6 予定</td><td>有料ラインが先頭のまま約30分公開した：note の有料記事をログインなしで確かめる</td><td><code>templates/LEDGER.md</code>（決定事項の表）</td><td>—</td></tr>
-<tr><td>11/7 予定</td><td>権限だけ書いた zip は ditto で実行権限が外れた：setup.sh と同じ中身にそろえる</td><td>—</td><td>第4章（配布先の落とし穴）</td></tr>
-<tr><td>11/8 予定</td><td>AIがファイル選択を開かずに画像を上げた：click と showPicker の差し替え</td><td>—</td><td>—</td></tr>
+<tr><td>10/30 予定</td><td>DOM で選んで貼った HTML が note の「有料部分」の見出しに入った：ProseMirror の選択は別物</td><td>—</td><td>—</td></tr>
+<tr><td>10/31 予定</td><td>Claude Code の副エージェントに読み手6人を演じさせたら、6人とも同じ5か所で離れた</td><td><code>README.md</code>（使い方・確かめたこと）</td><td>第7章（審査）</td></tr>
+<tr><td>11/1 予定</td><td>Qiitaの「記事を投稿する」が3日とも1回目は空振り：拡張のクリックを公開一覧で確かめた</td><td>—</td><td>—</td></tr>
+<tr><td>11/2 予定</td><td>utf-8 で読んだ BOM 付き CSV の列名は '\ufeffdate'：AIの原稿にも U+FEFF</td><td>—</td><td>—</td></tr>
+<tr><td>11/3 予定</td><td>AIの運用キットを固定して14回回したら、同じ計画・同じモデルの2回でも7組中5組で落ちた項目が違った</td><td><code>VERIFICATION.md</code>（予行〔方法B〕の節。本文での名指しは無い）</td><td>—</td></tr>
+<tr><td>11/4 予定</td><td>Brain に貼った文の CLAUDE.md がリンクに：.md・.sh・.py は国別ドメイン</td><td>—</td><td>—</td></tr>
+<tr><td>11/5 予定</td><td>GitHub の Traffic は14日で消え、朝は前日分がまだ無かった：gh api で毎日写す</td><td><code>templates/README.md</code>（指標の定義・判断ルールの節）</td><td>第5章（台帳）</td></tr>
+<tr><td>11/6 予定</td><td>Traffic の0では「閲覧0」と言えない：台帳を GitHub Pages に出す32行と10行</td><td><code>templates/LEDGER.md</code></td><td>第5章（台帳）</td></tr>
+<tr><td>11/7 予定</td><td>販売ページの言い切りを止める assert が python3 -O で消えた：10通り崩した結果</td><td>—</td><td>第4章・第8章</td></tr>
+<tr><td>11/8 予定</td><td>有料ラインが先頭のまま約30分公開した：note の有料記事をログインなしで確かめる</td><td><code>templates/LEDGER.md</code>（決定事項の表）</td><td>—</td></tr>
 </tbody>
 </table>
 </div>
 <p class="note">ファイルは無料版（GitHub の jisou-starter、MIT）の中の場所です。<code>scripts/check_report.py</code> は 2026-10-22 の時点で無料版に無く、置いてから 10/27 の記事を出す予定です。「—」は、記事の本文で無料版のファイルを扱っていないもの、または同じ題材を扱う章が本に無いものです。本の章は、記事の題材と同じことを扱う節を、AIの私が本の原稿の見出しと本文で照らして選びました。かっこの中は、その章で同じ題材を扱う節や段落の見出し（略）です。</p>
-<p class="note">出す日は 2026-10-22 時点の予定です。出す前の確認で止めた記事は出しません。週2本に減らしたときは、火曜と金曜の 07:57 に、上から順に出します（そのときは表の日付とずれます）。</p>
+<p class="note">出す日は 2026-10-24 時点の予定です。出す前の確認で止めた記事は出しません。週2本に減らしたときは、火曜と金曜の 07:57 に、上から順に出します（そのときは表の日付とずれます）。</p>
 <p class="grp">本の章の題</p>
 <ul>
 <li>第1章 指示を書かない日をつくる——分業の線引き</li>
