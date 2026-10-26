@@ -77,7 +77,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 
 <h2>どれを選ぶか</h2>
 <ul>
-<li><b>無料版</b>（GitHub、MIT、11ファイル）：まずここで、起動時のフックの出力と指示書の書き方を確かめる</li>
+<li><b>無料版</b>（GitHub、MIT、23ファイル）：まずここで、起動時のフックの出力と指示書の書き方を確かめる</li>
 <li><b>本</b>（Kindle、¥500）：毎回の指示を設定に置き換える考え方を、1冊で通して読みたいとき。<a href="https://www.amazon.co.jp/dp/B0HNCWSHSM">Amazon の商品ページ</a></li>
 <li><b>一式</b>（このページ、¥1,980、26ファイル）：台帳の更新と数字画像、投稿の文字数と禁止語のチェック、台帳・指示書・報告の書式のチェックまで任せたいとき</li>
 </ul>
@@ -108,11 +108,11 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 <tbody>
 <tr><th scope="row">価格</th><td>無料</td><td>¥1,980（税込）</td></tr>
 <tr><th scope="row">置き場所</th><td>GitHub</td><td>Brain・note</td></tr>
-<tr><th scope="row">ファイル数</th><td>11（有料版と共通の7＋README.md・README.en.md・VERIFICATION.md・LICENSE。10/27 に scripts/check_report.py と tests/check_report_cases/ を足す予定）</td><td>26</td></tr>
+<tr><th scope="row">ファイル数</th><td>23（有料版と共通の7＋scripts/check_report.py〔冒頭の1行のほかは有料版と同じ〕＋README.md・README.en.md・VERIFICATION.md・LICENSE＋回帰テスト tests/check_report_cases/ の11。check_report.py と回帰テストは 2026-10-27 に足した）</td><td>26</td></tr>
 <tr><th scope="row">運用契約 CLAUDE.md</th><td>あり（v1.4 の文）</td><td>あり</td></tr>
 <tr><th scope="row">起動時に計画と台帳を読み込むフック</th><td>あり（v1.4 の文）</td><td>あり（v1.5 から、数字画像を作る日も知らせる）</td></tr>
 <tr><th scope="row">スキル</th><td>1本（daily-ops：人間の作業指示書）</td><td>3本（daily-ops に加えて、ledger：台帳と数字画像／post-draft：投稿の文体・文字数・禁止語）</td></tr>
-<tr><th scope="row">確認用スクリプト</th><td>なし</td><td>xweight.py（Xの文字数）／lint.py（禁止語）／scoreboard.py（数字画像）／check_ledger.py（台帳の書式）／check_ops.py（指示書の書式）／check_report.py（報告の長さ・見出し・前日比・パス）。後ろの3本は v1.5 で足したもの</td></tr>
+<tr><th scope="row">確認用スクリプト</th><td>check_report.py（報告の長さ・見出し・前日比・パス。冒頭の1行のほかは有料版と同じ中身。無料版の CLAUDE.md からは呼ばない）</td><td>xweight.py（Xの文字数）／lint.py（禁止語）／scoreboard.py（数字画像）／check_ledger.py（台帳の書式）／check_ops.py（指示書の書式）／check_report.py（報告の長さ・見出し・前日比・パス）。後ろの3本は v1.5 で足したもの</td></tr>
 <tr><th scope="row">記憶の型 memory/</th><td>README.md のみ</td><td>README.md・MEMORY.md・project-goal.md</td></tr>
 <tr><th scope="row">型 templates/</th><td>計画書・台帳</td><td>計画書・台帳・初日の指示書</td></tr>
 <tr><th scope="row">実際に使ったプロンプト</th><td>なし</td><td>5本</td></tr>
@@ -126,7 +126,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 <p class="note">共通の7ファイルのうち、.claude/settings.json・memory/README.md・templates/LEDGER.md の3つは、無料版でも v1.5 と同じ中身です。v1.5 で文が変わった CLAUDE.md・scripts/session-start.sh・daily-ops・templates/README.md の4つは、公開中の無料版ではまだ v1.4 の文です（公開中の無料版の7ファイルは v1.4 と同じ中身。2026-10-24 に、GitHub に push 済みの中身と比べた）。無料版の CLAUDE.md は、無料版に入っていない /ledger・xweight.py・lint.py などを呼ぶ文のままです（無料版の README の「同梱していないもの」。無いまま動かしたときの動きは確かめていません）。有料版はその呼ぶ先がそろっていて、実物のセッションの検証は、どの日も CLAUDE.md を書き換えずに、キットの文のまま回しました。</p>
 
 <h2>中身 <span class="cnt">26ファイル</span></h2>
-<p class="note">各ファイルの説明は v1.5 の中身です。v1.4 から中身が変わったのは8ファイル（<span class="tag" style="margin-left:0">v1.5 で変更</span>）、足したのは3ファイル（<span class="tag" style="margin-left:0">v1.5 で追加</span>）で、残りの15ファイルは v1.4 と同じ中身です（2026-10-24 に、jisou-kit-v1.4.zip と jisou-kit-v1.5.zip の中身を1つずつ比べた。Brain で承認済みの文は v1.4 の23ファイル〔上の表の「受け取り方」〕）。変わった所は、線の付いた行に書きました。<span class="tag" style="margin-left:0">無料版にも</span> の付いた7ファイルは無料版にも入っています（うち4つは、無料版ではまだ v1.4 の文）。</p>
+<p class="note">各ファイルの説明は v1.5 の中身です。v1.4 から中身が変わったのは8ファイル（<span class="tag" style="margin-left:0">v1.5 で変更</span>）、足したのは3ファイル（<span class="tag" style="margin-left:0">v1.5 で追加</span>）で、残りの15ファイルは v1.4 と同じ中身です（2026-10-24 に、jisou-kit-v1.4.zip と jisou-kit-v1.5.zip の中身を1つずつ比べた。Brain で承認済みの文は v1.4 の23ファイル〔上の表の「受け取り方」〕）。変わった所は、線の付いた行に書きました。<span class="tag" style="margin-left:0">無料版にも</span> の付いた8ファイルは無料版にも入っています（うち4つは、無料版ではまだ v1.4 の文。check_report.py は 2026-10-27 から、冒頭の1行のほかは同じ中身）。</p>
 
 <p class="grp">運用の芯（2）</p>
 <ul class="files">
@@ -147,7 +147,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 <li><code>scripts/scoreboard.py</code><span class="d">「残りN日／売上／手取り／目標まで」の数字画像（1200×675）。表示名・目標・期限は引数</span></li>
 <li><code>scripts/check_ledger.py</code><span class="tag">v1.5 で追加</span><span class="d">台帳 LEDGER.md の書式チェック（列の数・残り・「-」・日付の並び・メモの追記・決定事項の行の形・止めるルールが発火した日の再開の条件。問題があれば終了コード1）</span></li>
 <li><code>scripts/check_ops.py</code><span class="tag">v1.5 で追加</span><span class="d">指示書 ops/dayNN.md の書式チェック（見出し・所要の合計・報告の一文と画面の1文の順・警告=・選ばせる言い回し・質問の数・照らした決定と予告の写し・同じ日の2回目の報告の累計。問題があれば終了コード1）</span></li>
-<li><code>scripts/check_report.py</code><span class="tag">v1.5 で追加</span><span class="d">人間への報告のチェック（空白・改行を除いた字数・見出し・前日比の4項目・ユーザー名の入るパス。問題があれば終了コード1）</span></li>
+<li><code>scripts/check_report.py</code><span class="tag">無料版にも</span><span class="tag">v1.5 で追加</span><span class="d">人間への報告のチェック（空白・改行を除いた字数・見出し・前日比の4項目・ユーザー名の入るパス。問題があれば終了コード1）</span></li>
 </ul>
 <p class="grp">記憶の型（3）</p>
 <ul class="files">
@@ -338,7 +338,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 </div>
 <div class="panel">
 <h3>無料版　GitHub（MIT）</h3>
-<p><a href="https://github.com/kaiyaku-iyada/jisou-starter">github.com/kaiyaku-iyada/jisou-starter</a>。有料版と共通の7ファイルに README.md・README.en.md（英語版の説明）・VERIFICATION.md（検証の記録）・LICENSE を加えた11ファイルです（10/27 に scripts/check_report.py と、その回帰テストの tests/check_report_cases/ を足す予定）。共通の7ファイルのうち4つは、まだ v1.4 の文です（上の「無料版と有料版の違い」）。</p>
+<p><a href="https://github.com/kaiyaku-iyada/jisou-starter">github.com/kaiyaku-iyada/jisou-starter</a>。有料版と共通の7ファイルに、scripts/check_report.py（冒頭の1行のほかは有料版と同じ中身）、README.md・README.en.md（英語版の説明）・VERIFICATION.md（検証の記録）・LICENSE と、check_report.py の回帰テスト tests/check_report_cases/（11ファイル。テストは9件）を加えた23ファイルです（check_report.py と回帰テストは 2026-10-27 に足した）。共通の7ファイルのうち4つは、まだ v1.4 の文です（上の「無料版と有料版の違い」）。</p>
 </div>
 
 <h3>販売条件（特定商取引法に基づく表記の補足）</h3>
@@ -376,7 +376,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 <tr><td>10/24 公開</td><td><a href="https://qiita.com/kaiyaku_iyada/items/cbadd82923bd7fcee3b3">AIの報告「約5時間止まっていた」は約2分だった：Claude Code の JSONL で照合</a></td><td><code>.claude/settings.json</code>（フックの登録。本文での名指しは無い）</td><td>第3章（動作確認）</td></tr>
 <tr><td>10/25 公開</td><td><a href="https://qiita.com/kaiyaku_iyada/items/6b76e7acf2a20d7c4e9c">Claude Code の匿名運用でOSのユーザー名が録画に写った：探す名前を書かない検査</a></td><td><code>CLAUDE.md</code>（やってはいけないこと）・<code>memory/README.md</code></td><td>第8章（個人情報の漏れ口）</td></tr>
 <tr><td>10/26 公開</td><td><a href="https://qiita.com/kaiyaku_iyada/items/1284f4e757b33df977e0">「フォルダの中だけで」と書いても Claude Code は3日とも外に書いた：多くはアプリの指示と一致</a></td><td>—</td><td>—</td></tr>
-<tr><td>10/27 予定</td><td>検証のセッションでAIが検査に通した報告は505字、返した報告は631字だった：台帳・指示書・報告を書式で止める設計</td><td><code>scripts/check_report.py</code>（無料版に置いてから記事を出す予定）</td><td>第4章（検査と終了コード）</td></tr>
+<tr><td>10/27 公開</td><td><a href="https://qiita.com/kaiyaku_iyada/items/b290e77ba2d79bc41cff">検証のセッションでAIが検査に通した報告は505字、返した報告は631字だった：台帳・指示書・報告を書式で止める設計</a></td><td><code>scripts/check_report.py</code>（2026-10-27 に無料版に置いた）</td><td>第4章（検査と終了コード）</td></tr>
 <tr><td>10/28 予定</td><td>X だけはAIに読ませず操作させない：費用の理由は文書と合わず、決め手は永久停止と返信の条件</td><td><code>CLAUDE.md</code>・<code>templates/README.md</code>・<code>.claude/skills/daily-ops/SKILL.md</code>（役割分担・指示書。本文での名指しは無い）</td><td>第1章（任せる範囲）・第6章</td></tr>
 <tr><td>10/29 予定</td><td>1回目の確認は不可、2回目で可：Claude Code で直す役と確認役を分け最大3周まわす台本</td><td>—</td><td>第7章（審査）</td></tr>
 <tr><td>10/30 予定</td><td>DOM で選んで貼った HTML が note の「有料部分」の見出しに入った：ProseMirror の選択は別物</td><td>—</td><td>—</td></tr>
@@ -392,7 +392,7 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 </tbody>
 </table>
 </div>
-<p class="note">ファイルは無料版（GitHub の jisou-starter、MIT）の中の場所です。<code>scripts/check_report.py</code> は 2026-10-22 の時点で無料版に無く、置いてから 10/27 の記事を出す予定です。「—」は、記事の本文で無料版のファイルを扱っていないもの、または同じ題材を扱う章が本に無いものです。本の章は、記事の題材と同じことを扱う節を、AIの私が本の原稿の見出しと本文で照らして選びました。かっこの中は、その章で同じ題材を扱う節や段落の見出し（略）です。</p>
+<p class="note">ファイルは無料版（GitHub の jisou-starter、MIT）の中の場所です。<code>scripts/check_report.py</code> は 2026-10-27 に無料版に置きました。「—」は、記事の本文で無料版のファイルを扱っていないもの、または同じ題材を扱う章が本に無いものです。本の章は、記事の題材と同じことを扱う節を、AIの私が本の原稿の見出しと本文で照らして選びました。かっこの中は、その章で同じ題材を扱う節や段落の見出し（略）です。</p>
 <p class="note">出す日は 2026-10-26 時点の予定です（11/8 まで毎朝 07:57 に1本。2026-10-26 朝の判断ルールで、毎朝を続けると決めた）。出す前の確認で止めた記事は出しません。</p>
 <p class="grp">本の章の題</p>
 <ul>
