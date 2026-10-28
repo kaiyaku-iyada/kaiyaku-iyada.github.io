@@ -376,17 +376,17 @@ footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:1rem}
 <tr><td>10/26 公開</td><td><a href="https://qiita.com/kaiyaku_iyada/items/1284f4e757b33df977e0">「フォルダの中だけで」と書いても Claude Code は3日とも外に書いた：多くはアプリの指示と一致</a></td><td>—</td><td>—</td></tr>
 <tr><td>10/27 公開</td><td><a href="https://qiita.com/kaiyaku_iyada/items/b290e77ba2d79bc41cff">検証のセッションでAIが検査に通した報告は505字、返した報告は631字だった：台帳・指示書・報告を書式で止める設計</a></td><td><code>scripts/check_report.py</code>（2026-10-27 に無料版に置いた）</td><td>第4章（検査と終了コード）</td></tr>
 <tr><td>10/28 予定</td><td>X だけはAIに読ませず操作させない：費用の理由は文書と合わず、決め手は永久停止と返信の条件</td><td><code>CLAUDE.md</code>・<code>templates/README.md</code>・<code>.claude/skills/daily-ops/SKILL.md</code>（役割分担・指示書。本文での名指しは無い）</td><td>第1章（任せる範囲）・第6章</td></tr>
-<tr><td>10/29 予定</td><td>1回目の確認は不可、2回目で可：Claude Code で直す役と確認役を分け最大3周まわす台本</td><td>—</td><td>第7章（審査）</td></tr>
-<tr><td>10/30 予定</td><td>DOM で選んで貼った HTML が note の「有料部分」の見出しに入った：ProseMirror の選択は別物</td><td>—</td><td>—</td></tr>
+<tr><td>10/29 予定</td><td>medium 2件でも確認役が「可」なら止まる：Claude Code の修正ループを空回しした結果</td><td>—</td><td>第7章（審査）</td></tr>
+<tr><td>10/30 予定</td><td>崩れた232ブロックを1回のトランザクションで並べ直した：EditorView は fiber から探した</td><td>—</td><td>—</td></tr>
 <tr><td>10/31 予定</td><td>Claude Code の副エージェントに読み手6人を演じさせたら、6人とも同じ5か所で離れた</td><td><code>README.md</code>（使い方・確かめたこと）</td><td>第7章（審査）</td></tr>
-<tr><td>11/1 予定</td><td>Qiitaの「記事を投稿する」が3日とも1回目は空振り：拡張のクリックを公開一覧で確かめた</td><td>—</td><td>—</td></tr>
+<tr><td>11/1 予定</td><td>Claude Code で Qiita に投稿、3日とも1回目は空振り：二重投稿を避けて押し直す手順</td><td>—</td><td>—</td></tr>
 <tr><td>11/2 予定</td><td>utf-8 で読んだ BOM 付き CSV の列名は '\ufeffdate'：AIの原稿にも U+FEFF</td><td>—</td><td>—</td></tr>
 <tr><td>11/3 予定</td><td>AIの運用キットを固定して14回回したら、同じ計画・同じモデルの2回でも7組中5組で落ちた項目が違った</td><td><code>VERIFICATION.md</code>（予行〔方法B〕の節。本文での名指しは無い）</td><td>—</td></tr>
-<tr><td>11/4 予定</td><td>Brain に貼った文の CLAUDE.md がリンクに：.md・.sh・.py は国別ドメイン</td><td>—</td><td>—</td></tr>
-<tr><td>11/5 予定</td><td>GitHub の Traffic は14日で消え、朝は前日分がまだ無かった：gh api で毎日写す</td><td><code>templates/README.md</code>（指標の定義・判断ルールの節）</td><td>第5章（台帳）</td></tr>
-<tr><td>11/6 予定</td><td>Traffic の0では「閲覧0」と言えない：台帳を GitHub Pages に出す32行と10行</td><td><code>templates/LEDGER.md</code></td><td>第5章（台帳）</td></tr>
-<tr><td>11/7 予定</td><td>販売ページの言い切りを止める assert が python3 -O で消えた：10通り崩した結果</td><td>—</td><td>第4章・第8章</td></tr>
-<tr><td>11/8 予定</td><td>有料ラインが先頭のまま約30分公開した：note の有料記事をログインなしで確かめる</td><td><code>templates/LEDGER.md</code>（決定事項の表）</td><td>—</td></tr>
+<tr><td>11/4 予定</td><td>「何も出なければ解消」の grep は、リンクが14あっても0だった：壊れた状態で先に数える</td><td>—</td><td>—</td></tr>
+<tr><td>11/5 予定</td><td>Qiita 5本で 7,257 views の朝、GitHub の参照元に qiita.com は無かった</td><td><code>templates/README.md</code>（指標の定義・判断ルールの節）</td><td>第5章（台帳）</td></tr>
+<tr><td>11/6 予定</td><td>「反映まで1分ほど」は測っていなかった：GitHub Pages のビルド37回は中央値19.4秒</td><td><code>templates/LEDGER.md</code></td><td>第5章（台帳）</td></tr>
+<tr><td>11/7 予定</td><td>Python の assert は -O で消える：Claude Code の運用で作る販売ページ照合に穴3つ</td><td>—</td><td>第4章・第8章</td></tr>
+<tr><td>11/8 予定</td><td>curl の出力に答えが出ていたのに見落とした：note の有料記事を無料部分0件のまま約30分公開</td><td><code>templates/LEDGER.md</code>（決定事項の表）</td><td>—</td></tr>
 </tbody>
 </table>
 </div>
