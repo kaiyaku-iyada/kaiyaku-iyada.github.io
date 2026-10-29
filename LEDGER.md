@@ -207,3 +207,4 @@
 | 10/29 | note | キットの記事の有料部分の冒頭に、10/29 の注記の段落を足した（.claude の隠しフォルダのコピー、金額を書かない媒体の定型行、開示の請求の受付。AIが編集画面で。価格・有料ラインの位置・無料部分・zip は変えていない） | https://note.com/kaiyaku_iyada/n/n899d771ef222 |
 | 10/29 | Brain | 単品1本目「報告照合ツール」（Claude Code の記録 JSONL とAIの報告を照らすスキル、¥980）を申請（09:43）し、承認されて公開（09:44 ごろ。AIがブラウザで入力と申請） | https://brain-market.com/u/kaiyaku_iyada/a/b3ETOxcjMgoTZsNWa0JXY |
 | 10/29 | Brain | 一式の題の説明部分・サブカテゴリ（Claude・Claude Code）・無料部分の冒頭（実物の出力）と、点検の3点を直し、再審査を申請（09:48。1回。価格 ¥1,980 と全ファイルは変えていない。結果は未確認。審査のあいだの公開ページは前の承認の文） | https://brain-market.com/u/kaiyaku_iyada/a/b2EzMwcjMgoTZsNWa0JXY |
+| 10/29 | note | 週次の記録 #2（無料。最終週の形に切り替えた2週目に、出したもの・確かめたこと・壊れた所。AIが編集画面に入力、持ち主が 20:02 に投稿。ハッシュタグ #AI #ClaudeCode。ログインなしの API で、無料・全文が読めること、本文が原稿と同じこと（見出し11・小見出し26も同じ。違いは見出しの番号の書き方と区切り線だけ）を確かめた） | https://note.com/kaiyaku_iyada/n/ndf5f6133e6e8 |
